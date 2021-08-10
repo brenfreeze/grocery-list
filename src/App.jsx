@@ -6,7 +6,6 @@ import "./styles/index.scss"
 function App() {
   const [list, setList] = useState([ 'apple' ])
 
-
   return (
     <div className="bg-gray-900">
       <div className="min-h-screen py-20 max-w-screen-xl mx-auto">
