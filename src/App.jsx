@@ -4,11 +4,8 @@ import Input from "./components/Input"
 import "./styles/index.scss"
 
 function App() {
-  const [checked, setChecked] = useState(false)
+  const [list, setList] = useState([ 'apple' ])
 
-  const handleChange = () => {
-    setChecked(!checked)
-  }
 
   return (
     <div className="bg-gray-900">
@@ -24,7 +21,9 @@ function App() {
         </div>
 
         <div className="flex flex-col gap-4 max-w-lg mx-auto">
-          <Checkbox checked={checked} onChange={handleChange} label="hello" />
+          {list.map(item => (
+            <Checkbox label={item} />
+          ))}
         </div>
       </div>
     </div>
